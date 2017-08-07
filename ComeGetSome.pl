@@ -3,7 +3,7 @@ use IO::Socket::INET;
 use GD;
 use strict;
 
-our $main_offsetx = 0;
+our $main_offsetx = 150;
 our $main_offsety = 0;
 
 $| = 1;
@@ -56,8 +56,8 @@ sub printImage {
 sub pixel {
     my ($x,$y,$r,$g,$b,$a,$offsetx,$offsety) = @_;
     if ( !defined $a )  { $a=255 };
-    if ( !defined $offsetx ) {  $offsetx=0 };
-    if ( !defined $offsety ) {  $offsety=0 };
+    if ( !defined $offsetx ) {  $offsetx=$main_offsetx };
+    if ( !defined $offsety ) {  $offsety=$main_offsety };
     $x = $x+$offsetx;
     $y = $y+$offsety;
     my $cmd;
