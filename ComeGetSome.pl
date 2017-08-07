@@ -22,8 +22,8 @@ my $socket = new IO::Socket::INET (
 
 
 GD::Image->trueColor(1);
-#my $image = new GD::Image('troll-face-meme.png') or die 'no pic dude !';
-my $image = newFromPng GD::Image('troll-face-meme.png',1) or die 'no pic dude !';
+#my $image = new GD::Image('resources/troll-face-meme.png') or die 'no pic dude !';
+my $image = newFromPng GD::Image('resources/troll-face-meme.png',1) or die 'no pic dude !';
 my $w = $image->width;
 my $h = $image->height;
 
@@ -56,7 +56,7 @@ sub printImage {
 sub pixel {
     my ($x,$y,$r,$g,$b,$a,$offsetx,$offsety) = @_;
     if ( !defined $a )  { $a=255 };
-    if ( !defined $offsetx ) {  $offsetx=320 };
+    if ( !defined $offsetx ) {  $offsetx=0 };
     if ( !defined $offsety ) {  $offsety=0 };
     $x = $x+$offsetx;
     $y = $y+$offsety;
