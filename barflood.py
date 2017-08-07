@@ -35,7 +35,7 @@ import time
 from PIL import Image
 
 #im = Image.open('troll-face-meme.png').convert('RGB')
-im = Image.open('tits-or-gtfo_o_847231.jpg').convert('RGB')
+im = Image.open('resources/tits-or-gtfo_o_847231.jpg').convert('RGB')
 #im = Image.open('unpodifiga.jpg').convert('RGB')
 #im = Image.open('thumbsup.jpg').convert('RGB')
 im.thumbnail((80,80), Image.ANTIALIAS)
